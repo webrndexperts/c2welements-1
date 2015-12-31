@@ -1,0 +1,359 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,300,100,400italic,300italic,500italic,500,700,700italic,900,900italic);
+body {
+    width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+    width: 100%;
+
+}
+h2 {
+  text-transform: uppercase;
+}
+img{
+	width:100%;
+	height:auto;
+}
+
+ul, li, a {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+ a, a:hover {
+  text-decoration: none;
+}
+
+.fix-nav {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn{
+	  background: #DC4638!important;	
+	  border: none;
+}
+.btn:hover{	
+	background: #ff1600!important;	
+}
+
+
+.about , .video, .social-icon , .testimonial, .events, .service{
+  margin-top: 100px;
+}
+
+/* header */
+
+nav{
+  border: 1px solid transparent;
+  min-height: 50px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.nav li:hover a, .nav .active a {
+  color: #fff !important;
+}
+.nav li:hover, .nav .active a {
+  background: #dc4638 none repeat scroll 0 0 !important;
+}
+.nav li a {
+  color: #dc4638 !important;
+  text-transform: uppercase;
+}
+
+.main-slider .carousel-caption {
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -100px;
+  text-align: left;
+  top: 40%;
+  width: 50%;
+}
+
+.main-slider .carousel-caption h1 {
+  animation: 500ms ease 0s normal none 1 running zoomIn;
+  color: #fff;
+  font-family: "Oswald",sans-serif;
+  font-weight: 300;
+  padding: 20px;
+    background: rgba(255, 67, 46, 0.7) none repeat scroll 0 0;
+}
+
+.main-slider .carousel-caption p {
+  color: #fff;
+  font-size: 15px;
+  padding: 20px;
+    background: rgba(255, 67, 46, 0.7) none repeat scroll 0 0;
+}
+.main-slider .carousel-control {
+  width: 5%;
+    background: transparent none repeat scroll 0 0 !important;
+}
+
+.main-slider .carousel-control i {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+}
+
+.bg{
+	  background: rgba(0, 0, 0, 0) url("../images/bg.jpg") repeat scroll 0 0;
+}
+
+/* about */
+
+
+
+.about h3 {
+  color: red;
+  font-size: 30px;
+  font-weight: 800;
+}
+.about p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.about-sect {
+  font-size: 20px !important;
+  font-weight: 100 !important;
+}
+.about a{
+	color: #DC4638;
+}
+
+/* video */
+
+.video iframe {
+    display: block;
+}
+.email-us {
+  background: #000 none repeat scroll 0 0;
+    display: block;
+  padding: 20px 15px;
+  width: 100%;
+}
+.email-us input {
+  width: 100%;
+   padding: 15px;
+   margin: 10px 0;
+}
+.email-us .btn.btn-theme {
+
+  color: #fff;
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+
+
+
+/* social icon */
+.social-icon{
+	  text-align: center;
+}
+.social-icon h1 {
+  font-weight: 900;
+}
+.social-icon p {
+  color: #999;
+  font-size: 20px;
+}
+
+.social-icon li {
+  border: 1px solid;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  width:80px;
+  height: 80px;
+}
+.social-icon li a {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+.social-icon i {
+  font-size: 34px;
+}
+
+/* testimonial */
+
+.testimonial {
+  background: #23527c none repeat scroll 0 0;
+}
+.testimonial .carousel{
+  padding: 50px 0;
+  text-align: center;
+}
+.tstmnl-img {
+  display: inline-block;
+  width: 100px;
+}
+
+.testimonial h2, .tstmnl-img-name{
+	color:#fff;
+}
+
+.tstmnl-cntn {
+  color: #5f5e5e;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 30px;
+  padding: 20px 100px;
+  color:#fff;
+}
+.testimonial .carousel-control i {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+}
+
+/* service css */
+
+.service {
+  text-align: center;
+      margin-bottom: 100px;
+}
+.service p {
+  font-size: 22px;
+}
+
+.srvs-sct {
+  text-align: center;
+}
+.srvs-img {
+  width: 200px;
+    display: inline-block;
+	margin-bottom: 20px;
+}
+.srvs-img-name > h4 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.srvs-img-name > p {
+  font-size: 19px !important;
+  font-weight: 300;
+}
+
+.service-box {
+  margin-top: 50px;
+}
+
+/* motivation_contact css start here */
+
+.motivation_contact {
+  background: #23527c none repeat scroll 0 0;
+     padding: 50px 0;
+}
+.motivation_contact input, textarea {
+    width: 100%;
+    margin-top: 20px;
+	padding: 10px;
+	color: #999 !important;
+}
+.motivation_contact .btn {
+  background: #dc4638 none repeat scroll 0 0;
+  color: #fff !important;
+  font-size: 18px;
+  padding: 10px 0;
+}
+.motivation_contact-section {
+  color: #fff;
+}
+.motivation_contact-section > p {
+  margin-top: 25px;
+}
+footer{
+	padding:15px 0;
+}
+
+/* overlay */
+
+.inner-banner {
+  position: relative;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+.overlay h1 {
+  border-bottom: 1px solid #eee;
+  font-size: 80px;
+  left: 50%;
+  margin-left: -120px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+    margin-top: -50px;
+}
+
+/* map */
+
+.map iframe {
+  width: 100%;
+}
+
+
+/* media query css */
+
+@media only screen and (max-width: 990px) {
+	
+	.hidden-xs {
+  display: block !important;
+}
+.main-slider .carousel-caption {
+  display: none;
+}
+}
+
+@media only screen and (max-width: 640px) {
+	
+	.about, .video, .social-icon, .testimonial, .events, .service, .motivation_contact {
+  margin-top: 30px;
+}
+	.tstmnl-cntn {
+  padding: 0;
+  font-size: 18px;
+}
+.video iframe {
+  height:200px !important;
+}
+.main-slider .carousel-control {
+  width: 16%;
+}
+.email-us input {
+  margin: 5px 0;
+  padding: 8px 15px;
+}
+.email-us .btn.btn-theme {
+  font-size: 17px;
+  margin: 4px 0;
+}
+.overlay h1 {
+  font-size: 48px;
+  margin-top: -50px;
+    margin-left: -90px;
+}
+.srvs-sct {
+  margin-bottom: 60px;
+}
+}
+
+ 
+   
