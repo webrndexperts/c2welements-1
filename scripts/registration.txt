@@ -1,0 +1,35 @@
+
+welcome to the video
+In this video I will be showing you Registration Process
+
+It's a very simple registration form with very basic details required.
+
+Like Your first name, Last name, Email ID, Phone, Password, the Package or Plan you wanted to select, the referral code 
+
+Referral code will be given to you by your friend you is already memeber of the system and if you use this code your friend will get special benefits.
+
+You can check the terms and conditions by following the url.
+
+Lets fill the details. Here you can see teh details
+
+and now click Register button
+
+Now I have been redirected to the Login page and you can notice a Message Welcome to Click2Web! 
+
+But My accout is not active yet
+
+Here you can see a welcome email with my login id and password. I am username is the email address.
+
+Now I have to wait for next email of account activation to login into the system.
+
+So here is the Activation email.
+
+You can see the message that my account is active now. Now my acctount is active and I can login to the system. 
+
+So it was Registration Process. 
+
+If you can any query please visit our website's contact page
+
+Thank you for watching the video.
+
+

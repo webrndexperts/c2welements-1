@@ -1,0 +1,18 @@
+welcome to the video
+In this video I will be showing you Login Process
+
+You have enter you username and password.
+
+Now this is OTP which is one time password. We have made the system secure with two layers. Every time to login into the system you have to generate an OTP. The otp will be sent to your email address. 
+
+To get a OTP you have to enter your username and click the button Send OTP. 
+
+Now we haev to check our email for the OTP. Here is the OTP now copy the OTP and paste into the input box. Now click Login button.
+
+Here we are successfully logged in. 
+
+If you can any query please visit our website's contact page
+
+Thank you for watching the video.
+
+
