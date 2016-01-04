@@ -43,9 +43,11 @@ img{
 	margin:0px !important;
 	border: none;
 }
+
+
 .menu li a
 {
-	color: #434F5B;
+	color: #ccc;
 	font-weight:500;
 	font-family: 'Poppins', sans-serif;
 	line-height: 29px;
@@ -53,9 +55,14 @@ img{
 	z-index:999;
 	
 }
-.menu li a:hover
+.menu li.active a
 {
-	background-color: #212A3F;
+	background-color: #394258;
+	color:#fff;
+}
+.menu li a:hover, .menu li a.active 
+{
+	background-color: #394258;
 	color:#fff;
 }
 .menu-button
