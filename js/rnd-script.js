@@ -1,7 +1,18 @@
 jQuery(document).ready(function(){
-	var hb_url = 'http://dev.htmlblocks.com/';
+	var hb_url_1 = 'http://dev1.click2web.co.in/';
 	var base_url = jQuery(document).find('head').find('base').attr('href'); 
+	
+	if( jQuery('.rnd-style-element').length ){
+		jQuery('.rnd-style-element').each(function(){
+			var current = jQuery(this);
+			if( typeof current.attr('data-class') !== "undefined" ){
+				var button_style = '<style>.'+current.attr('data-class')+'{'+current.attr('data-style')+'} .'+current.attr('data-class')+':hover{'+current.attr('data-style-hover')+'}</style>';
+				current.parents().find('#page').before(button_style);
+			}
 
+		});
+	}
+	
 	function createCookie(name,value,days) {
 	    if (days) {
 	        var date = new Date();
@@ -22,14 +33,38 @@ jQuery(document).ready(function(){
 	    }
 	    return null;
 	}
+	
+	/*Fixed navigation*/	
+	/*fixed navigtion*/
+	if( jQuery('.fix-me').length ){
 
-	jQuery('.slick-slider-4').slick({
-		'slidesToShow': 4, 'slidesToScroll': 1, 'autoplay': true, 'arrows': false, 'autoplaySpeed': 1500
-	});
-	jQuery('.slick-slider-3').slick({
-		'slidesToShow': 3, 'slidesToScroll': 1, 'autoplay': true, 'arrows': false, 'autoplaySpeed': 1500
-	});
+		var nav = jQuery('.fix-me');
+		var pos = nav.offset().top;
+		jQuery(window).scroll(function () {
+			var fix = (jQuery(this).scrollTop() > pos) ? true : false;
+		    	nav.toggleClass("fix-nav", fix);
+		    	jQuery('body').toggleClass("fix-body", fix);
+		});
+	}
 
+	if( jQuery('.slick-slider-4').length ){
+
+		jQuery('.slick-slider-4').slick({
+			'slidesToShow': 4, 'slidesToScroll': 1, 'autoplay': true, 'arrows': false, 'autoplaySpeed': 1500
+		});
+	}
+
+	if( jQuery('.slick-slider-3').length ){
+
+		jQuery('.slick-slider-3').slick({
+			'slidesToShow': 3, 'slidesToScroll': 1, 'autoplay': true, 'arrows': false, 'autoplaySpeed': 1500
+		});
+	}
+
+	setTimeout(function(){
+		jQuery(document).find('a[href="'+window.location.href+'"').parent('li').addClass('active');
+	},400);
+	
 	/*Send view count to hb*/
 	setTimeout(function(){ 
 		
@@ -46,7 +81,7 @@ jQuery(document).ready(function(){
 
 		jQuery.ajax({
 
-			url: hb_url+'SaleFunnelPages/add_view_to_funnel/',
+			url: hb_url_1+'/SaleFunnelPages/add_view_to_funnel/',
 			type: 'post',
 			dataType: 'json',
 			async: false,
@@ -115,38 +150,20 @@ jQuery(document).ready(function(){
 
 	});
 
-	jQuery('button[type="submit"]').click(function(){
-		console.log(jQuery('#rnd-page-info-head-div').length);
-		console.log('jhere');
+	jQuery('button[type="submit"]').parents().closest('form').submit(function(){
+		
 		if( jQuery('#rnd-page-info-head-div').length  ) {
 			console.log('in');
 			/*Funnel page*/
 			var current = jQuery(this);
-			var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-
-			var flag = false;
-			jQuery('input[required]').each(function(){
-				var current_input = jQuery(this);
-				if( current_input.val() == '' ) {
-					alert('Values are required!');
-					return false;
-				}	
-			});
-
-			jQuery('select[required]').each(function(){
-				var current_input = jQuery(this);
-				if( current_input.val() == '' ) {
-					alert('Values are required!');
-					return false;
-				}	
-			});
+			
 
 			
-			var postData = current.parents().closest('form').serialize();
+			var postData = current.serialize();
 
 			jQuery.ajax({
 
-				url : hb_url+'SaleFunnelPages/add_me/',
+				url : hb_url_1+'/SaleFunnelPages/add_me/',
 				type: 'post',
 				cache:true,
 				dataType: 'json',
@@ -169,9 +186,9 @@ jQuery(document).ready(function(){
 
 			jQuery('#ajax-status-message').remove();
 			var current = jQuery(this);
-			var postData = current.closest('form').serialize();
+			var postData = current.serialize();
 			jQuery.ajax({
-				url : hb_url+'App/rnd8591698789_form_data/',
+				url : hb_url_1+'/App/rnd8591698789_form_data/',
 				type : 'post',
 				dataType: 'json',
 				cache:true,
@@ -181,15 +198,15 @@ jQuery(document).ready(function(){
 					current.after('<p id="ajax-status-message"><i class="fa fa-spin fa-spinner"></i>&nbsp;Submitting form</p>');
 				},
 				success: function(response){
-					current.after('<p id="ajax-status-message">Successfully submitted form! Wait while redirecting.</p>');
+					current.find('button[type="submit"]').after('<p id="ajax-status-message">Successfully submitted form! Wait while redirecting.</p>');
 					if( current.closest('form').find('#redirect_url').val() == '' ){
 						window.location = window.location
 					} else {
-						window.location = current.closest('form').find('#redirect_url').val();
+						window.location = current.find('#redirect_url').val();
 					}
 				},
 				error: function(  jqXHR, textStatus, errorThrown){
-					current.after('<p id="ajax-status-message">'+errorThrown+'</p>');
+					current.find('button[type="submit"]').after('<p id="ajax-status-message">'+errorThrown+'</p>');
 				}
 			});
 		}
@@ -256,7 +273,7 @@ jQuery(document).ready(function(){
 });
 
 
-/*
+
 jQuery(function() {
 
   	jQuery('.animated').appear();
@@ -280,4 +297,4 @@ jQuery(function() {
 
 
 
-});*/
+});
